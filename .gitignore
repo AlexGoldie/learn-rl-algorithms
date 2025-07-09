@@ -1,0 +1,7 @@
+training
+wandb/
+save_files/
+outputs/
+**/__pycache__/
+**.npy
+artifacts

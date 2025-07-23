@@ -35,10 +35,10 @@ algorithms/
 
 Clone this repo using the below:
 ```bash
-git clone git@github.com:AlexGoldie/learn-rl-algorithms.git --recurse-submodules
+git clone git@github.com:AlexGoldie/learn-rl-algorithms.git
 ```
 
-Please note, this will also install the (brilliant) [Learned Optimization](https://github.com/google/learned_optimization) library, which is included as a submodule!
+Please note, this will also download the (brilliant) [Learned Optimization](https://github.com/google/learned_optimization) library!
 
 ## 📄 Requirements
 

@@ -282,7 +282,7 @@ def make_train(config):
                                 a_max=1 + config["CLIP_EPS"],
                             )
                         ) * gae
-                        drift = nn.relu(drift - 1e-4 - nn.relu(ppo_drift))
+                        drift = nn.relu(drift - 1e-4 + nn.relu(ppo_drift))
                         loss_actor = -(ratio * gae - drift).mean()
 
                         loss_actor = loss_actor.mean()

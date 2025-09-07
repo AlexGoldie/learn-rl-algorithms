@@ -55,7 +55,7 @@ class Distilled_LPO(nn.Module):
             if config.get("REMOVE_PPO"):
                 print("NO PPO")
                 drift_ppo = jnp.zeros_like(drift_ppo)
-            drift = nn.relu(out - 1e-6)
+            drift = nn.relu(drift_ppo + out - 1e-6)
             return drift
 
         def drift_fn_sum(ratio, advantage):
@@ -104,7 +104,7 @@ def get_data_LPO():
             if config.get("REMOVE_PPO"):
                 print("NO PPO")
                 drift_ppo = jnp.zeros_like(drift_ppo)
-            drift = nn.relu(out - 1e-6)
+            drift = nn.relu(drift_ppo + out - 1e-6)
             return drift
 
         def drift_fn_sum(ratio, advantage):
